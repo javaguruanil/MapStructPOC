@@ -1,0 +1,40 @@
+{
+  "offerId": 123,
+  "startTime": "2020-02-10T08:20:00.781+0000",
+  "expirtyTime": "2020-02-10T08:20:00.781+0000",
+  "status": "pending",
+  "eligibility": false,
+  "discount": 44.4,
+  "offerType": "StoreCoupons",
+  "offerDesc": "Buy two Bakery items and get 10 percent off",
+  "rcptTxt": "This offer is a weekly offer for House Hold Identification",
+  "discountThreshold": 50,
+  "offerLimit": 3,
+  "offerLookupDO": {
+    "storeId": 5678,
+    "terminalId": null,
+    "type": "Groceries",
+    "offerId": 123,
+    "condition": "AND",
+    "clipsLookUpDO": {
+      "offerId": 123,
+      "storeId": 5678,
+      "status": "C",
+      "usageLimitLookUpDO": {
+        "offerId": 123,
+        "count": 1,
+        "hhid": 9001
+      },
+      "hhid": 9001
+    }
+  },
+  "crossShoppingStoresDO": {
+    "storeList": [
+      {
+        "storeID": 5678,
+        "storeMetaData": "This is WestOakland Safeway store which will be opened 24 hours every day."
+      }
+    ],
+    "hhid": 9001
+  }
+}

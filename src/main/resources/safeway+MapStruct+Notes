@@ -1,0 +1,63 @@
+1.Mapping:
+----------
+Basic Mapping:
+--------------
+  Here, Source and Targe may or may not have same names.
+  For different name, use below
+  
+  Example: 
+    @Mapping(source="" , target="")
+
+ 
+2. Adding custom methods to mappers:
+---------------------------------
+ -> we can implement using default methods in mapper interface.
+ 
+NOTE: Make use you are not using any Multi-level inheritance
+ 
+ 
+ 
+
+3. Invoking other mappers:
+--------------------------
+
+  -> It is achieved by using "uses=<MapperName>.class"
+  
+  Example:
+     @Mapper(uses=ABCMapper.class)
+
+NOTE: 
+1. Inside the interface there must be at least one mapping method.
+2. Make sure mapping method is having : parent Class of HAS-A relationship mapping logic [i.e we can skip internal classes mapping]
+
+
+4. Retrieving mapper:
+---------------------
+ There are 3 ways but in spring we have only one as below 
+  => Use componentModel = "spring" then the mapper is singleton-scope bean
+  
+  Example: 
+    @Mapping(componentModel = "spring") 
+	
+	
+
+5. Updating existing bean:
+--------------------------
+If an instance is already existing then it will reuse that instance for mapping instead of creating new object.
+
+
+
+6. Customizing mapping:
+-----------------------
+It is done by using below annotations and they are like callBack method concepts.
+   @AfterMapping  , @BeforeMapping   
+NOTE:
+-----
+If you want to write some logic for above annotation methods then change method access modifier as "default".
+
+
+7. Inverse mapping:
+-------------------
+It is done by using @InheritInverseConfiguration to achieve Bi-Directional mapping.
+
+
